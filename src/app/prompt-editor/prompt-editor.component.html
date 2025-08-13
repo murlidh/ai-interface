@@ -1,0 +1,26 @@
+<div class="bg-white dark:bg-gray-800 p-4 rounded shadow space-y-4">
+    <h2 class="text-lg font-semibold">Prompt</h2>
+
+  <label class="field">
+    <span class="label">Templates</span>
+    <select class="mt-1 w-full rounded border-gray-300 dark:border-gray-600 dark:bg-gray-700 p-2"[ngModel]="selectedTemplateId" (ngModelChange)="applyTemplate($event)">
+      <option [ngValue]="null">— Choose a template —</option>
+      <option *ngFor="let t of templates" [value]="t.id">{{ t.title }}</option>
+    </select>
+  </label>
+
+  <textarea class="w-full rounded border-gray-300 dark:border-gray-600 dark:bg-gray-700 p-2"
+                rows="5"
+            rows="6"
+            [ngModel]="prompt"
+            (ngModelChange)="onPromptChange($event)"
+            placeholder="Type your prompt here..."></textarea>
+
+  <div class="actions">
+    <button class="px-4 py-2 rounded bg-green-500 text-black hover:bg-green-600"(click)="saveToLocal()">Save</button>
+    <button class="px-4 py-2 rounded bg-yellow-500 text-black hover:bg-yellow-600" (click)="loadFromLocal()">Load</button>
+    <div class="spacer"></div>
+    <button class="px-4 py-2 rounded bg-blue-500 text-black hover:bg-blue-600" (click)="send()">Send</button>
+    <button class="px-4 py-2 rounded bg-red-500 text-black hover:bg-red-600" (click)="clear()">Clear</button>
+  </div>
+</div>

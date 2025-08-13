@@ -1,0 +1,5 @@
+[
+  { "id": "gpt-3.5", "name": "GPT-3.5", "description": "Fast, cost-effective for most tasks." },
+  { "id": "gpt-4",   "name": "GPT-4",   "description": "Stronger reasoning and instruction following." },
+  { "id": "custom",  "name": "Custom Model", "description": "Your fine-tuned internal model." }
+]

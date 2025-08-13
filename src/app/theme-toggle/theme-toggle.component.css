@@ -1,0 +1,22 @@
+button {
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+}
+
+body.light {
+  --btn-bg: #fff;
+  --btn-text: #000;
+  background-color: #f4f4f4;
+  color: #000;
+}
+
+body.dark {
+  --btn-bg: #333;
+  --btn-text: #fff;
+  background-color: #121212;
+  color: #fff;
+}

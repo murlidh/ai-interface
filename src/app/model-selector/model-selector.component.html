@@ -1,0 +1,10 @@
+
+  <div class="bg-white dark:bg-gray-800 p-4 rounded shadow space-y-2">
+      <h2 class="text-lg font-semibold">Model</h2>
+      <label class="block text-sm font-medium">Select Model</label>
+      <select [(ngModel)]="selectedModel"
+              class="mt-1 w-full rounded border-gray-300 dark:border-gray-600 dark:bg-gray-700 p-2">
+        <option *ngFor="let model of models" [value]="model.name">{{ model.name }}</option>
+      </select>
+      <p class="text-sm text-gray-500 dark:text-gray-400">{{  selectedModel?.description }}</p>
+    </div>

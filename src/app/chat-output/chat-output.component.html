@@ -1,0 +1,18 @@
+<div class="panel">
+  <div class="panel-title">Response</div>
+
+  <div class="response-box" *ngIf="response; else empty">
+    <pre class="response-pre">{{ response }}</pre>
+  </div>
+
+  <ng-template #empty>
+    <div class="muted">No response yet. Write a prompt and press <b>Send</b>.</div>
+  </ng-template>
+
+  <div class="actions">
+    <button class="btn" (click)="copy()" [disabled]="!response">Copy</button>
+    <button class="btn ghost" (click)="download()" [disabled]="!response">Download JSON</button>
+    <div class="spacer"></div>
+    <button class="btn danger ghost" (click)="clear()" [disabled]="!response">Clear</button>
+  </div>
+</div>
